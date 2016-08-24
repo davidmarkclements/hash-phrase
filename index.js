@@ -1,5 +1,6 @@
 const fs = require('fs')
-const dict = fs.readFileSync('./words.txt').toString().split('\n')
+const path = require('path')
+const dict = fs.readFileSync(path.join(__dirname, 'words.txt')).toString().split('\n')
 const pbkdf2 = require('crypto').pbkdf2
 const bignum = require('bignum')
 
